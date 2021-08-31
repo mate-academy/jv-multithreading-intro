@@ -8,7 +8,6 @@ public class Main {
         Thread first = new MyThread();
         first.setDaemon(true);
         first.start();
-
         Thread second = new Thread(new MyRunnable());
         second.start();
     }
