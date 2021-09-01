@@ -5,11 +5,11 @@ import core.basesyntax.thread.MyThread;
 
 public class Main {
     public static void main(String[] args) {
-        Thread t = new MyThread();
-        t.setDaemon(true);
-        t.start();
+        Thread MyThread = new MyThread();
+        MyThread.setDaemon(true);
+        MyThread.start();
 
-        Thread r = new Thread(new MyRunnable());
-        r.start();
+        Thread MyRunnableThread = new Thread(new MyRunnable());
+        MyRunnableThread.start();
     }
 }
