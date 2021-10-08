@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Thread myThread = new MyThread();
         Runnable myRunnable = new MyRunnable();
-        Thread DaemonThread = new Thread(myRunnable);
+        Thread daemonThread = new Thread(myRunnable);
 
-        DaemonThread.setDaemon(true);
-        DaemonThread.start();
+        daemonThread.setDaemon(true);
+        daemonThread.start();
         myThread.start();
     }
 }
