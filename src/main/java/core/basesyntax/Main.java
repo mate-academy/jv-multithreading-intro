@@ -5,7 +5,7 @@ import core.basesyntax.thread.MyThread;
 
 public class Main {
     public static void main(String[] args) {
-        MyThread myThread = new MyThread();
+        Thread myThread = new MyThread();
         myThread.setName("MyThread");
         myThread.setDaemon(true);
 
