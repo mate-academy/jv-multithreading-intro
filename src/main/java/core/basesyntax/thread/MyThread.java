@@ -7,7 +7,7 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        number.set(new Random().nextInt(10));
+        number.set(new Random().nextInt(20));
         System.out.println(number.get());
     }
 }
