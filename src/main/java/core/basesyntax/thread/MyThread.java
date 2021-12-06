@@ -1,13 +1,12 @@
 package core.basesyntax.thread;
 
-import java.util.Random;
-
 public class MyThread extends Thread {
-    private static ThreadLocal<Integer> number = new ThreadLocal<>();
 
     @Override
     public void run() {
-        number.set(new Random().nextInt(20));
-        System.out.println(number.get());
+        for (int i = 0; i < 20; i++) {
+            System.out.println(i + 1);
+        }
+
     }
 }
