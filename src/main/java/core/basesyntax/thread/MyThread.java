@@ -1,5 +1,11 @@
 package core.basesyntax.thread;
 
-public class MyThread {
-    // write your code here
+public class MyThread extends Thread {
+    @Override
+    public void run() {
+        int res = 0;
+        while (res <= 20) {
+            System.out.println(res++);
+        }
+    }
 }
