@@ -1,10 +1,10 @@
 package core.basesyntax.thread;
 
-public class MyThread extends Thread{
+public class MyThread extends Thread {
 
     @Override
     public void run() {
-        for (;;){
+        for (;;) {
             System.out.println("I am the daemon thread!");
         }
     }
