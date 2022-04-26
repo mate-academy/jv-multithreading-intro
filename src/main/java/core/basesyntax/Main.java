@@ -1,7 +1,16 @@
 package core.basesyntax;
 
+import core.basesyntax.thread.MyRunnable;
+import core.basesyntax.thread.MyThread;
+
 public class Main {
     public static void main(String[] args) {
-        // write your code here
+        MyRunnable runnable = new MyRunnable();
+        Thread runnableThread = new Thread(runnable);
+        runnableThread.setDaemon(true);
+        runnableThread.start();
+
+        MyThread newThread = new MyThread();
+        newThread.start();
     }
 }
