@@ -10,21 +10,18 @@ public class Main {
         runnableDaemonRThread.start();
     }
 
-    static class FirstUserThread extends Thread{
+    static class FirstUserThread extends Thread {
         @Override
         public void run() {
             int i = 0;
             while (i <= 20) {
                 System.out.println(i);
                 i++;
-
-
             }
         }
     }
 
     static class DaemonThread implements Runnable {
-
         @Override
         public void run() {
             System.out.println("I am the daemon thread!");
