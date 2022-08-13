@@ -9,5 +9,7 @@ public class Main {
         Runnable myRunnable = new MyRunnable();
         Thread myRunnableThread = new Thread(myRunnable);
         myRunnableThread.setDaemon(true);
+        myThread.start();
+        myRunnableThread.start();
     }
 }
