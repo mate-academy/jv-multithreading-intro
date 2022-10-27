@@ -6,10 +6,10 @@ import core.basesyntax.thread.MyThread;
 public class Main {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
-        MyRunnable myRunnable = new MyRunnable();
-        Thread runnableThread = new Thread(myRunnable);
-        runnableThread.setDaemon(true);
         myThread.start();
-        runnableThread.start();
+        MyRunnable myRunnable = new MyRunnable();
+        Thread myRunnableThread = new Thread(myRunnable);
+        myRunnableThread.setDaemon(true);
+        myRunnableThread.start();
     }
 }
