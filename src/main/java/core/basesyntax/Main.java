@@ -9,7 +9,6 @@ public class Main {
         thread.setDaemon(true);
         MyRunnable runnable = new MyRunnable();
         Thread runnableThread = new Thread(runnable);
-
         thread.start();
         runnableThread.start();
     }
