@@ -8,9 +8,7 @@ public class Main {
         Thread firstThread = new MyThread();
         Runnable secondThreat = new MyRunnable();
         Thread secondThread = new Thread(secondThreat);
-
         firstThread.start();
         secondThread.start();
-
     }
 }
