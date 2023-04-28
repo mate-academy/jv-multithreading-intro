@@ -1,5 +1,11 @@
 package core.basesyntax.thread;
 
-public class MyRunnable {
-    // write your code here
+import java.util.Random;
+
+public class MyRunnable implements Runnable{
+    @Override
+    public void run() {
+        while (true)
+        System.out.println(new Random().nextInt(20));
+    }
 }
