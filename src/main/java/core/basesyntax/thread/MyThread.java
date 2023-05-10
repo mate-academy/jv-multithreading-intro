@@ -5,7 +5,7 @@ public class MyThread extends Thread {
     public void run() {
         int num = 0;
         while (num <= 20) {
-            num++;
+            System.out.println(num++);
         }
     }
 }
