@@ -6,8 +6,7 @@ import core.basesyntax.thread.MyThread;
 public class Main {
     public static void main(String[] args) {
        Thread customThread = new MyThread();
-       Runnable myRunnable = new MyRunnable();
-       Thread customDeamonThread = new Thread(myRunnable);
+       Thread customDeamonThread = new Thread(new MyRunnable());
        customDeamonThread.setDaemon(true);
 
        customDeamonThread.start();
