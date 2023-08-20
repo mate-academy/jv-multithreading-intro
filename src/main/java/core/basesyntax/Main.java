@@ -10,5 +10,6 @@ public class Main {
         myRunnableThread.start();
         Thread myThread = new MyThread();
         myThread.setDaemon(true);
-        myThread.start();    }
+        myThread.start();
+    }
 }
