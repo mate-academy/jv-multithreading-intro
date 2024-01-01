@@ -5,8 +5,8 @@ import core.basesyntax.thread.MyThread;
 
 public class Main {
     public static void main(String[] args) {
-        MyThread thread = new MyThread();
-        thread.start();
+        MyThread myThread = new MyThread();
+        myThread.start();
         MyRunnable myRunnable = new MyRunnable();
         Thread daemonThread = new Thread(myRunnable);
         daemonThread.setDaemon(true);
