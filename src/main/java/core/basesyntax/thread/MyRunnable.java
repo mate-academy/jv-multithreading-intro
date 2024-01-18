@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class MyRunnable implements Runnable {
     private static ThreadLocal<Integer> number = new ThreadLocal<>();
+
     @Override
     public void run() {
         number.set(new Random().nextInt(20));
