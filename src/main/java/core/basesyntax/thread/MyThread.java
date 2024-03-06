@@ -1,5 +1,10 @@
 package core.basesyntax.thread;
 
-public class MyThread {
-    // write your code here
+public class MyThread extends Thread {
+    @Override
+    public void run() {
+        while (true) {
+            System.out.println("I am daemon thread!");
+        }
+    }
 }
