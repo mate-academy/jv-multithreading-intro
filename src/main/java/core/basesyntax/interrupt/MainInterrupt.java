@@ -5,8 +5,9 @@ public class MainInterrupt {
         Thread thread = new Thread(new Task());
         thread.start();
 
-        Thread.sleep(100);
+        Thread.sleep(1);
         thread.interrupt();
+
         System.out.println(" asked to stop thread");
     }
 
