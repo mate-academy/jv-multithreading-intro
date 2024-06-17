@@ -15,12 +15,13 @@ public class Task implements Runnable{
 
     private void processDataChunk(int i) {
         try {
-            Thread.sleep(1);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
+
             Thread.currentThread().interrupt();
             System.out.println("Interrupted exception !!!" + Thread.currentThread().isInterrupted());
-            System.out.println(Thread.interrupted());
-            System.out.println(Thread.interrupted());
+            System.out.println(Thread.interrupted()); // comment for thread interruption
+            System.out.println(Thread.interrupted()); // comment for thread interruption
             return;
         }
         System.out.println("Process chunk: " + i);

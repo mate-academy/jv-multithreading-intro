@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Counter {
     // private int count = 0;
-    private Integer count = Integer.valueOf("0");
+    private Integer count = 0;
     private String str = "";
 
     public void add() {
@@ -17,13 +17,11 @@ public class Counter {
 //    public void add() {
 //        str = str + count.getAndIncrement() + "\n";
 //    }
-
-
 //    public void increment(int i) {
 //        str += i + " \n";
 //    }
 
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 

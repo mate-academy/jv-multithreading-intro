@@ -4,7 +4,7 @@ public class MainLock {
     public static void main(String[] args) throws InterruptedException {
         CounterLock counter = new CounterLock();
         Thread thread1 = new Thread(() -> {
-            for (int i = 0; i <= 10000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 counter.add();
             }
         });
