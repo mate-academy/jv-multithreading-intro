@@ -12,7 +12,7 @@ public class MyThread extends Thread {
     }
 
     public void run() {
-        while (true) {
+        {
             try {
                 semaphore.acquire();
                 System.out.println(name + " acquired the access");
@@ -23,17 +23,28 @@ public class MyThread extends Thread {
                 System.out.println("Something went wrong for " + name);
             }
         }
-
     }
 }
 
 class Test {
-    public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(2);
-        new MyThread(semaphore, "First").start();
-        new MyThread(semaphore, "Second").start();
-        new MyThread(semaphore, "Third").start();
-        new MyThread(semaphore, "Fourth").start();
-        new MyThread(semaphore, "Fifth").start();
+    public static void main(String[] args) throws InterruptedException {
+        Semaphore semaphore = new Semaphore(3);
+        MyThread first = new MyThread(semaphore, "First");
+        MyThread second = new MyThread(semaphore, "Second");
+        MyThread third = new MyThread(semaphore, "Third");
+        MyThread fourth = new MyThread(semaphore, "Fourth");
+        MyThread fifth = new MyThread(semaphore, "Fifth");
+
+        first.start();
+        second.start();
+        third.start();
+        fourth.start();
+        fifth.start();
+
+        first.join();
+        second.join();
+        third.join();
+        fourth.join();
+        fifth.join();
     }
 }

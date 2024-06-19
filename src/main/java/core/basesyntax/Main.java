@@ -10,6 +10,7 @@ public class Main {
         System.out.println(runtime.maxMemory() / 1024 / 1024);
         System.out.println(runtime.freeMemory() / 1024 / 1024);
         System.out.println(runtime.totalMemory() / 1024 / 1024);
+        System.out.println(runtime.availableProcessors());
 //        Thread t2 = new MyThread();
 //        t2.start();
 //        MyRunnable myRunnable = new MyRunnable();
