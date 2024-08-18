@@ -2,6 +2,7 @@ package core.basesyntax.thread;
 
 public class MyThread extends Thread {
     private static final ThreadLocal<Integer> numberValue = new ThreadLocal<>();
+
     public MyThread(String name) {
         super(name);
     }
