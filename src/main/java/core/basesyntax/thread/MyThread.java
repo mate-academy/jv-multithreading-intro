@@ -2,7 +2,7 @@ package core.basesyntax.thread;
 
 import java.util.stream.IntStream;
 
-public class MyThread extends Thread{
+public class MyThread extends Thread {
 
     @Override
     public void run() {
