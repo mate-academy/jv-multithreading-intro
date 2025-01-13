@@ -11,6 +11,5 @@ public class Main {
         thread.setDaemon(true);
         runnableThread.start();
         thread.start();
-
     }
 }
