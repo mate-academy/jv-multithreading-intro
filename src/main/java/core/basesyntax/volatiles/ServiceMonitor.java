@@ -2,7 +2,7 @@ package core.basesyntax.volatiles;
 
 public class ServiceMonitor extends Thread {
 
-    private volatile boolean running = true;
+    private boolean running = true;
 
     public void setRunning(boolean running) {
         this.running = running;

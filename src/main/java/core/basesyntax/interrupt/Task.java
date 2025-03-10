@@ -20,8 +20,8 @@ public class Task implements Runnable{
 
             Thread.currentThread().interrupt();
             System.out.println("Interrupted exception !!!" + Thread.currentThread().isInterrupted());
-            System.out.println(Thread.interrupted()); // comment for thread interruption
-            System.out.println(Thread.interrupted()); // comment for thread interruption
+           // System.out.println(Thread.interrupted()); // comment for thread interruption
+            //System.out.println(Thread.interrupted()); // comment for thread interruption
             return;
         }
         System.out.println("Process chunk: " + i);

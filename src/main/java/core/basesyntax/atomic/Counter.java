@@ -10,8 +10,7 @@ public class Counter {
     public void add() {
         str = str + count++ + "\n";
     }
-
-    //  public synchronized void add() {
+//  public synchronized void add() {
 //    str = str + count++ + "\n";
 //  }
 //    public void add() {
