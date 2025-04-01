@@ -1,19 +1,11 @@
 package core.basesyntax;
 
-import static java.lang.Thread.sleep;
+import core.basesyntax.thread.MyRunnable;
+import core.basesyntax.thread.MyThread;
 
 public class Main {
     public static void main(String[] args) {
-        Runnable runnable = () -> {
-                while(true) {
-                    System.out.println("I am the daemon thread!");
-                    try {
-                        sleep(500);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-        };
+        Runnable runnable = new MyRunnable();
         Thread thread = new Thread(runnable);
         thread.setDaemon(true);
         thread.start();
@@ -22,23 +14,4 @@ public class Main {
         thread1.start();
     }
 
-}
-
-class MyThread extends Thread {
-    public MyThread(String name) {
-        super(name);
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i <= 20; i++) {
-            System.out.println("Thread " + Thread.currentThread().getName()
-                    + " prints: " + i);
-            try {
-                sleep(100);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
 }
