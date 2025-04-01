@@ -1,5 +1,20 @@
 package core.basesyntax.thread;
 
-public class MyThread {
-    // write your code here
+public class MyThread extends Thread {
+    public MyThread(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i <= 20; i++) {
+            System.out.println("Thread " + Thread.currentThread().getName()
+                    + " prints: " + i);
+            try {
+                sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 }
