@@ -9,7 +9,6 @@ public class Main {
         Thread t1 = new Thread(runnable);
         t1.start();
 
-
         MyThread t2 = new MyThread(() -> {
             for (int i = 0; i <= 20; i++) {
                 System.out.println(i);
