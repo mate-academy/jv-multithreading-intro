@@ -12,6 +12,5 @@ public class Main {
 
         MyThread myThread = new MyThread();
         myThread.start();
-
     }
 }
