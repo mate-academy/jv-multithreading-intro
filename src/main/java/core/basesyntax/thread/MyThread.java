@@ -1,5 +1,10 @@
 package core.basesyntax.thread;
 
-public class MyThread {
-    // write your code here
+import java.util.stream.IntStream;
+
+public class MyThread extends Thread {
+    @Override
+    public void run() {
+        IntStream.rangeClosed(0,20).forEach(System.out::println);
+    }
 }
