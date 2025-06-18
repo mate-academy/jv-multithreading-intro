@@ -8,6 +8,7 @@ public class Main {
         Thread t2 = new MyThread1();
         t2.start();
     }
+
     public static class MyThread1 extends Thread {
         @Override
         public void run() {
@@ -16,6 +17,7 @@ public class Main {
             }
         }
     }
+
     public static class MyRunnable implements Runnable {
 
         @Override
