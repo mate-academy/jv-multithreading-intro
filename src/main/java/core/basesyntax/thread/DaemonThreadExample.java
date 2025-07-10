@@ -9,6 +9,7 @@ public class DaemonThreadExample implements Runnable {
         TimeUnit.MICROSECONDS.sleep(100000);
         System.out.println("Daemon thread is running...");
       } catch (InterruptedException e) {
+        System.out.println(11111);
         Thread.currentThread().interrupt();
         System.out.println("Interrupted exception !!!" + Thread.currentThread().isInterrupted());
         return;
