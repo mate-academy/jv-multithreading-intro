@@ -5,18 +5,14 @@ import core.basesyntax.thread.MyThread;
 
 public class Main {
     public static void main(String[] args) {
-        MyThread counterThread = new MyThread();
-        counterThread.setName("Counter-Thread");
-        MyRunnable daemonTask = new MyRunnable();
-        Thread daemonThread = new Thread(daemonTask, "Daemon-Checker");
-        daemonThread.setDaemon(true);
+        MyRunnable myRunnable = new MyRunnable();
 
-        System.out.println("Starting Counter Thread (Non-Daemon)...");
-        counterThread.start();
+        Thread t1 = new MyThread();
+        Thread t2 = new Thread(myRunnable);
 
-        System.out.println("Starting Daemon Thread...");
-        daemonThread.start();
+        t2.setDaemon(true);
 
-        System.out.println("Main thread finished execution.");
+        t1.start();
+        t2.start();
     }
 }
