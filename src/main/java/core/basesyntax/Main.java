@@ -1,7 +1,11 @@
 package core.basesyntax;
 
+import core.basesyntax.application.Application;
+
 public class Main {
     public static void main(String[] args) {
-        // write your code here
+
+        Application application = new Application();
+        application.start();
     }
 }
