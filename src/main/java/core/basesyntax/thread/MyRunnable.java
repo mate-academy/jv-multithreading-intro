@@ -1,10 +1,10 @@
 package core.basesyntax.thread;
 
 public class MyRunnable implements Runnable {
-    int i = 0;
+
     @Override
     public void run() {
-        while(i == 0) {
+        while (true) {
             System.out.println("I am the daemon thread!");
         }
     }
